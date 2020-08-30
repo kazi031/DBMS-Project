@@ -1,0 +1,9 @@
+select e.*,t.title,s.salary,s.starting_date,s.ending_date from 
+			salaries s join employees e on s.emp_no = e.emp_no join titles t on e.emp_no = t.emp_no
+ 				where s.emp_no = 10004 and t.starting_date = s.starting_date;
+				
+				
+				
+				
+-- unique key checking
+select contact,count(contact) from employees e group by e.contact having count(contact) > 1;

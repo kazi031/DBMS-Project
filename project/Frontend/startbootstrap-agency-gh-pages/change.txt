@@ -1,0 +1,36 @@
+<div class="container">
+		<div class="intro-text">
+        	<div class="intro-lead-in">Welcome To E-va!</div>
+        	<div class="intro-heading text-uppercase">It's Nice To Meet You</div>
+        	<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+      	</div>
+	</div>
+	
+	
+	
+	
+	
+transition: 10s;
+	height: 100vh;
+	
+	animation-name: animate;
+	animation-direction: alternate-reverse;
+	animation-duration: 30s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	animation-play-state: running;
+	animation-timing-function: ease-in-out;
+	
+	
+	
+	@keyframes animate{
+	0%{
+		background-image:url(../img/ewaste/new/02.jpeg);
+	}50%{
+		background-image:url(../img/ewaste/new/06.jpeg);
+	}100%{
+		background-image:url(../img/ewaste/new/05.jpeg);
+	}
+	
+	
+}

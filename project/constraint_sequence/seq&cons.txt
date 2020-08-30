@@ -1,0 +1,50 @@
+
+
+
+
+create table customers
+(
+    customer_id NUMBER(10) not null ,
+    first_name varchar2(100) not null,
+    last_name varchar2(100) not null,
+    gender varchar2(2) not null,
+    email_address varchar2(100),
+    number_of_complaints NUMBER(10),
+    constraint cust_id_pk primary key(customer_id),
+    constraint gender_check check(gender in('M','F'))
+);
+
+insert into customers (customer_id,first_name,last_name,gender,email_address,number_of_complaints) values(002,'MM Rushadul','Mannan','M','mmRushad@gmail.com',1);
+
+sequence and trigger:
+
+
+create table customers
+(
+    customer_id NUMBER(10) not null ,
+    first_name varchar2(100) not null,
+    last_name varchar2(100) not null,
+    gender varchar2(2) not null,
+    email_address varchar2(100),
+    number_of_complaints NUMBER(10),
+    constraint cust_id_pk primary key(customer_id),
+    constraint gender_check check(gender in('M','F'))
+);
+
+//seq create
+create sequence c_id start with 1;
+
+//trigger create
+CREATE OR REPLACE TRIGGER cust_tr 
+BEFORE INSERT ON customers 
+FOR EACH ROW
+
+BEGIN
+  SELECT c_id.NEXTVAL
+  INTO   :new.customer_id
+  FROM   dual;
+END;
+
+
+insert into customers (first_name,last_name,gender,email_address,number_of_complaints) values('Kazi Rafid','Raiyan','M','Kazirafidraiyan031@gmail.com',1);
+insert into customers (first_name,last_name,gender,email_address,number_of_complaints) values('Asima Oshin','Putul','F','Asima.Oshin1998@gmail.com',3);

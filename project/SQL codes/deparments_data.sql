@@ -1,0 +1,11 @@
+INSERT INTO departments VALUES ('d001','Recycle');
+INSERT INTO departments VALUES ('d002','Finance & Accounting');
+INSERT INTO departments VALUES ('d003','Human Resources');
+INSERT INTO departments VALUES ('d004','Marketing & Sales');
+INSERT INTO departments VALUES ('d005','Research & Development');
+INSERT INTO departments VALUES ('d006','Quality Management');
+INSERT INTO departments VALUES ('d007','Production');
+INSERT INTO departments VALUES ('d008','Database Management');
+INSERT INTO departments VALUES ('d009','Customer Service');
+INSERT INTO departments VALUES ('d010','Refurbished Services');
+INSERT INTO departments VALUES ('d011','Web Development');
